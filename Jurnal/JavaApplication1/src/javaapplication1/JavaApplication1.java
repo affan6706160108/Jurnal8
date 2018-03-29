@@ -17,11 +17,11 @@ public class JavaApplication1 {
      * @param args the command line arguments
      */
     public static void main(String[]args) {
-      Scanner show = new Scanner(System.in);
+       Scanner show = new Scanner(System.in);
         System.out.print("Masukan Jumlah Deret Fibonacci : ");
         int n = show.nextInt();
         long fib[] = new long[n];
-        long sumF =0;
+       
          
         fib[0] = 1;
         fib[1] = 1;
@@ -30,11 +30,11 @@ public class JavaApplication1 {
             fib[i] = fib[i-1] + fib[i-2];
         }
          
-        for (int i = 0; i < n; i++) {
-            sumF = sumF + fib[i];
+        for (int i = n-1; i >= 0; i--) {
+            System.out.print(fib[i] + " ");
           
         }
-          System.out.println(" "+sumF);
+       
          
     }
  
